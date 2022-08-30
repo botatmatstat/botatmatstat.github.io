@@ -1,3 +1,8 @@
+try {
+    questions;
+} catch (error) {
+    setTimeout(() => {questions;}, 500);
+}
 // Переменные для результатов
 var max_result = questions.length; 
 var result_array = new Array(questions.length);
