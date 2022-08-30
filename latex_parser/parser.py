@@ -57,8 +57,8 @@ def extract(text):
     question = lst[1].strip().replace("\n", " ")
     answers = list(map(lambda x: x.strip(), lst[3:8]))
     counter = 0
-    bad_answers = ["bad answer"]
-    good_answers = ["good answer"]
+    bad_answers = ["bad answer", "не угадал", "не туда!", "тоже ересь", "неверно"]
+    good_answers = ["good answer", "ура!", "отлично"]
     for index, element in enumerate(lst):
         if any(element.lower().strip().startswith(x) for x in bad_answers):
             counter += 1
