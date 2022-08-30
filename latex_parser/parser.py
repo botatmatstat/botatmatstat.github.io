@@ -1,27 +1,24 @@
 #!/usr/bin/python
 
 import re
-from os import listdir
-from sys import argv
+import os
+import sys
 
 
 def main():
     result = "questions = ["
-    for i, file in enumerate(listdir()):
+    for i, file in enumerate(os.listdir()):
         if not file.startswith("exercise") or not file.endswith("tex"): continue
         print(f"Question: #{i}:")
         excracted = extract(open(file).read())
         result += create_dict(*excracted)
     result += "]"
-    args = argv
+    args = sys.argv
     if len(args) == 1:
         file = "temp"
     elif len(args) == 2:
         file = args[1]
     else:
-        return
-    if file == ["help", "--help", "-h"]:
-        print("Usage: parser.py {out_file}.js")
         return
     if not file.endswith(".js"):
         file += ".js"

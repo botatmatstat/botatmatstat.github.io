@@ -1,9 +1,10 @@
+// Если вопросы не загрузились, то перезагрузить страницу
 try {
     questions;
 } catch (error) {
     setTimeout(() => {
         document.location.reload();
-    }, 2000);
+    }, 1500);
 }
 // Переменные для результатов
 var max_result = questions.length; 
@@ -31,7 +32,10 @@ function next_question(effect) {
 }
 
 // Вывести пояснение
-function render_explanation(effect, value, right_answer){
+function render_explanation(effect, value, right_answer){  
+    // Для быстрой проверочки  
+    // next_question(effect);
+    // return
     let question_field = document.getElementById("question-text");
     // let explanation = questions[question_number].explanation; 
     // question_field .innerHTML += `${explanation}`;
@@ -49,7 +53,6 @@ function disable_buttons(value, right_answer){
     let buttons = document.getElementsByName("button");
     buttons.forEach(function(button) {
         button.disabled = true;
-        
         if (button.id != right_answer){
             if (button.id == value){
                 button.style = "background: #ff8f8c;"
@@ -82,8 +85,7 @@ function render_answers(){
             onclick="render_explanation(${effect}, '${key}', '${right_answer}');">
                 ${value}
             </button>`;
-     })
-     ;
+     });
      render_latex();
 }
 
