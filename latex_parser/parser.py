@@ -1,15 +1,30 @@
+#!/usr/bin/python
+
 import re
+import os
+import sys
 
 
 def main():
     result = "questions = ["
-    for i in range(1, 31):
-        print(i)
-        excracted = extract(open(f"exercise{i:0>2}.tex").read())
+    for file in os.listdir():
+        if not file.startswith("exercise") or not file.endswith("tex"): continue
+        excracted = extract(open(file).read())
         result += create_distionary(*excracted)
     result += "]"
-    with open("temp.js", "w+") as f:
-        f.write(result)
+    args = sys.argv
+    if len(args) == 1:
+        file = "temp"
+    elif len(args) == 2:
+        file = args[1]
+    else:
+        return
+    if not file.endswith(".js"):
+        file += ".js"
+    print("Writing file {}".format(file))
+    with open(file, "w+") as f:
+        if len(result) > 30:
+            f.write(result)
 
 
 def extract(text):
@@ -26,6 +41,8 @@ def extract(text):
         r"\Corr": r"\operatorname{Corr}",
         r"\ldots": r"...",
         r"\%": "%",
+        r"\(": r"\(\,",
+        r"\)": r"\,\)",
     }
     delimiters = ("\\begin{question}", "\\end{question}",
                   "\\end{solution}", "\\begin{solution}",
@@ -40,11 +57,12 @@ def extract(text):
     question = lst[1].strip().replace("\n", " ")
     answers = list(map(lambda x: x.strip(), lst[3:8]))
     counter = 0
-    bad_answers = ["bad answer", "не", "ересь"]
+    bad_answers = ["bad answer"]
+    good_answers = ["good answer"]
     for index, element in enumerate(lst):
-        if any(x in element.lower() for x in bad_answers):
+        if any(element.lower().strip().startswith(x) for x in bad_answers):
             counter += 1
-        elif counter:
+        elif any(element.lower().strip().startswith(x) for x in good_answers):
             break
     right_answer = dictionary.get(counter, "A")
     return question, answers, right_answer
