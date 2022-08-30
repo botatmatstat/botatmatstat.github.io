@@ -1,23 +1,27 @@
 #!/usr/bin/python
 
 import re
-import os
-import sys
+from os import listdir
+from sys import argv
 
 
 def main():
     result = "questions = ["
-    for file in os.listdir():
+    for i, file in enumerate(listdir()):
         if not file.startswith("exercise") or not file.endswith("tex"): continue
+        print(f"Question: #{i}:")
         excracted = extract(open(file).read())
-        result += create_distionary(*excracted)
+        result += create_dict(*excracted)
     result += "]"
-    args = sys.argv
+    args = argv
     if len(args) == 1:
         file = "temp"
     elif len(args) == 2:
         file = args[1]
     else:
+        return
+    if file == ["help", "--help", "-h"]:
+        print("Usage: parser.py {out_file}.js")
         return
     if not file.endswith(".js"):
         file += ".js"
@@ -61,16 +65,16 @@ def extract(text):
     good_answers = ["good answer", "ура", "отлично"]
     for index, element in enumerate(lst):
         if any(element.lower().strip().startswith(x) for x in bad_answers):
-            print(element)
+            print(f"\tAnswer {counter}: {element}")
             counter += 1
         elif any(element.lower().strip().startswith(x) for x in good_answers):
-            print(element)
+            print(f"\tAnswer {counter}: {element}")
             break
     right_answer = dictionary.get(counter, "A")
     return question, answers, right_answer
 
 
-def create_distionary(question, answers, right_answer):
+def create_dict(question, answers, right_answer):
     format_string = "{"
     format_string += f"""
     "question": String.raw`{question}`,"""
