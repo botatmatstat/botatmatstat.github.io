@@ -25,17 +25,9 @@ function next_question(effect) {
 
 // Вывести пояснение
 function render_explanation(effect, value, right_answer){
-    // Для тестирования
-    // next_question(effect); 
-    // return 
     let question_field = document.getElementById("question-text");
-    let explanation = questions[question_number].explanation; 
-    // if (right_answer == value) {
-    //     question_field .innerHTML += `<hr> Вы выбрали правильный ответ ${right_answer}`
-    // } else{
-    // question_field .innerHTML += 
-    // `<hr>Вы выбрали ${value}, но правильный ответ: ${right_answer}<br>${explanation} <br>`
-    // }
+    // let explanation = questions[question_number].explanation; 
+    // question_field .innerHTML += `${explanation}`;
     question_field .innerHTML += 
     `<hr>
     <button class="button" onclick="next_question(${effect});">
@@ -86,6 +78,13 @@ function render_answers(){
      })
      ;
      render_latex();
+}
+
+// Отрендерить латех
+function render_latex(){
+    MathJax.typeset();
+    MathJax.startup.document.state(0);
+    MathJax.typeset();
 }
 
 // Перейти к результатам
