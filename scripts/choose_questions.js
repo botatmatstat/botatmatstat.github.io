@@ -1,4 +1,6 @@
 let links = {
+    "Задания 2016": "questions_2016.js",
+    "Задания 2017": "questions_2017.js",
     "Задания 2018-1": "questions_2018_1.js", 
     "Задания 2018-1": "questions_2018_2.js",
     "Задания 2018-3": "questions_2018_3.js",
