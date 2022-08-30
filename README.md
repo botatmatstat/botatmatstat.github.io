@@ -1,6 +1,15 @@
 # botatmatstat.github.io
 
+## Структура проекта
 
+         | index.html
+  Проект | instructions.html
+         | quiz.html
+         | results.html 
+         |____________________.
+         |      scripts/      | 
+         |____________________|
+         
 ## Что это
 Это сайт, где (на данный момент) собраны задачи c экзаменов по матстату отсюда: https://github.com/bdemeshev/probability_hse_exams
 ## Куда сообщать об ошибках и куда писать предложения?
