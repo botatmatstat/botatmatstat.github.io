@@ -2,13 +2,18 @@
 
 ## Структура проекта
 
-         | index.html
-  Проект | instructions.html
-         | quiz.html
-         | results.html 
-         |____________________.
-         |      scripts/      | 
-         |____________________|
+                  | index.html
+           Проект | instructions.html
+                  | quiz.html
+                  | results.html 
+                  |____________________._______________________.
+                  |                    | questions/            | ## .js файлы с заданиями ## 
+                  |                    |_______________________|
+                  |                    | choose_questions.js   
+                  |       scripts/     | questions_link.js     
+                  |                    | quiz.js               
+                  |____________________| results.js   
+                  
          
 ## Что это
 Это сайт, где (на данный момент) собраны задачи c экзаменов по матстату отсюда: https://github.com/bdemeshev/probability_hse_exams
