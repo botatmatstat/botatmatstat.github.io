@@ -40,10 +40,11 @@ def extract(text):
     question = lst[1].strip().replace("\n", " ")
     answers = list(map(lambda x: x.strip(), lst[3:8]))
     counter = 0
+    bad_answers = ["bad answer", "не", "ересь"]
     for index, element in enumerate(lst):
-        if "Bad answer" in element:
+        if any(x in element.lower() for x in bad_answers):
             counter += 1
-        if "Good" in element:
+        elif counter:
             break
     right_answer = dictionary.get(counter, "A")
     return question, answers, right_answer
