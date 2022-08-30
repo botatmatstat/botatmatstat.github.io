@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="styles/main.css">
+<link rel="stylesheet" href="styles/buttons.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
+<title>Ботание матстата</title>
+</head>
+<body>
+<h1>Ботать матстат</h1> <hr>
+<h2>Опции:</h2>
+<div class="container">
+<button class="button" onclick="location.href='instructions.html';" style="padding: 5%;">Выбрать задания для ботания</button>
+</div> <hr>
+<h2>Описание:</h2>
+<div class="center">
+    <h2>
+        Что это
+    </h2>
+        Это сайт, где (на данный момент) собраны <a href="https://github.com/bdemeshev/probability_hse_exams">
+            задачи c экзаменов по матстату
+        </a>
+    <hr>
+
+    <h2>
+        Автор
+    </h2>
+        Автор сайта (не задач) - Владимир Перепёлкин
+    <h2>
+        <hr>
+        Как составляются базы с заданиями
+    </h2>
+        <ul>
+            <li>
+                С помощью парсера, который можно найти в репозитории проекта: <code> latex_parser/parser.py</code>, парсятся <code>.tex</code> файлы с задачами
+            </li>
+            <li>
+                Результат помещается в <code>scripts/questions/</code>
+            </li>
+            <li>
+                Пара <code>название:путь</code> помещается в словарь внутри <code>scripts/questions_link.js</code>
+            </li>
+            <li>
+                Проверяется, корректно ли спарсились задачи. В случае ошибок, можно либо подкорректировать парсер, либо внести исправления вручную.
+            </li>
+        </ul>
+</div>
+</body>
+</html>
