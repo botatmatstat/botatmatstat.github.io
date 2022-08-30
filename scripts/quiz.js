@@ -1,7 +1,9 @@
 try {
     questions;
 } catch (error) {
-    setTimeout(() => {questions;}, 500);
+    setTimeout(() => {
+        document.location.reload();
+    }, 2000);
 }
 // Переменные для результатов
 var max_result = questions.length; 
