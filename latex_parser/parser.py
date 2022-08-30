@@ -58,11 +58,13 @@ def extract(text):
     answers = list(map(lambda x: x.strip(), lst[3:8]))
     counter = 0
     bad_answers = ["bad answer", "не угадал", "не туда!", "тоже ересь", "неверно"]
-    good_answers = ["good answer", "ура!", "отлично"]
+    good_answers = ["good answer", "ура", "отлично"]
     for index, element in enumerate(lst):
         if any(element.lower().strip().startswith(x) for x in bad_answers):
+            print(element)
             counter += 1
         elif any(element.lower().strip().startswith(x) for x in good_answers):
+            print(element)
             break
     right_answer = dictionary.get(counter, "A")
     return question, answers, right_answer
