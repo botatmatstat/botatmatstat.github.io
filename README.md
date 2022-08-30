@@ -2,7 +2,7 @@
 
 
 ## Что это
-Это сайт, где (на данный момент) собраны задачи c экзаменов по матстату -- https://github.com/bdemeshev/probability_hse_exams
+Это сайт, где (на данный момент) собраны задачи c экзаменов по матстату отсюда: https://github.com/bdemeshev/probability_hse_exams
 ## Куда сообщать об ошибках?
 В issues
 ## Автор
