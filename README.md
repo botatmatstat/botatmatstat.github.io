@@ -1,18 +1,28 @@
 # botatmatstat.github.io
 
 ## Структура проекта
-
+                  .___________________.
                   | index.html
            Проект | instructions.html
                   | quiz.html
                   | results.html 
                   |____________________._______________________.
-                  |                    | questions/            | ## .js файлы с заданиями ## 
-                  |                    |_______________________|
-                  |                    | choose_questions.js   
-                  |       scripts/     | questions_link.js     
-                  |                    | quiz.js               
-                  |____________________| results.js   
+                  |                    | questions/            | *.js файлы с заданиями 
+                  |                    |                       | script.py  - для beautify/minify штук
+                  |                    |_______________________| 
+                  |      scripts/      | choose_questions.js     - для генерации выбора заданий   
+                  |                    | questions_link.js       - для получения переменной с заданиями
+                  |                    | quiz.js                 - для работы с вопросами из заданий
+                  |                    | results.js              - для вывода результатов
+                  |____________________|________________________
+                  |                    | main.css
+                  |      styles/       | buttons.css 
+                  |                    | corner.css
+                  |____________________|_________________________
+                  |                    |
+                  |     latex_parser/  | parser.py                - для парсинга задач из .tex            
+                  |____________________|_________________________
+                  
                   
          
 ## Что это
