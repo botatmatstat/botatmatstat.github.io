@@ -1,5 +1,5 @@
 .button {
-    background-color: #85a4ed;
+    background: #85a4ed;
     font-family: 'Montserrat', sans-serif;
     border: none;
     border-radius: 8pt;
@@ -15,7 +15,7 @@
     box-shadow: 0px 0px 10px rgba(0.5,0.5,0.5,0.5);
 }
 .button:hover, .button:focus { 
-    transition: 1s linear;
+    transition: 0s linear;
     background: #678adb; 
 }
 .option {
@@ -39,6 +39,6 @@
 
 }
 .option:hover, .option:focus { 
-    transition: 1s linear;
+    transition: 0s linear;
     background: #fff6d5; 
 }
