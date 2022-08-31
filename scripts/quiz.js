@@ -37,6 +37,7 @@ function next_question(effect) {
     question_number++;
     if (question_number < questions.length) {init_question()} 
     else {results()}
+    disable_next_button(true);
 }
 
 // Вывести пояснение
@@ -47,12 +48,6 @@ function render_explanation(effect, value, right_answer){
     if (explanation != ""){
         question_field .innerHTML += `<hr><p class="explanation">${explanation}</p>`;
     }
-    question_field .innerHTML += 
-    `<hr>
-    <button class="button" onclick="next_question(${effect});">
-        Дальше
-    </button> 
-    <br>`;
     disable_buttons(value, right_answer);
     render_latex();
 }
@@ -78,8 +73,20 @@ function disable_buttons(value, right_answer){
             }
         }
     });
+    disable_next_button(false);
 }
 
+// Поменять состояние кнопки "вперёд"
+function disable_next_button(bool) {
+    let next_button = document.getElementById("next-button");
+    if (bool) {
+        next_button.disabled = true; 
+        next_button.style = "background:grey;cursor:not-allowed;"
+    } else {
+        next_button.disabled = false; 
+        next_button.style = "background:#85a4ed;cursor:pointer;"
+    }
+}
 // Отобразить варианты ответов
 function render_answers(){
     let options_field = document.getElementById("options")
