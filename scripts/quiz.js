@@ -17,10 +17,9 @@ function prev_question() {
     init_question();
 }
 // Перейти к следующему вопросу
-function next_question(effect) {
+function next_question() {
     let options_field = document.getElementById("options");
     options_field.innerHTML = "";
-    result_array[question_number] = effect; 
     question_number++;
     if (question_number < questions.length) {init_question()} 
     else {results()}
@@ -29,12 +28,12 @@ function next_question(effect) {
 
 // Вывести пояснение
 function render_explanation(effect, value, right_answer){  
-    // Для быстрой проверочки  
     let question_field = document.getElementById("question-text");
     let explanation = questions[question_number].explanation; 
     if (explanation != ""){
         question_field .innerHTML += `<hr><p class="explanation">${explanation}</p>`;
     }
+    result_array[question_number] = effect; 
     disable_buttons(value, right_answer);
     render_latex();
 }
@@ -45,19 +44,11 @@ function disable_buttons(value, right_answer){
     buttons.forEach(function(button) {
         button.disabled = true;
         if (button.id != right_answer){
-            if (button.id == value){
-                button.style = "background: #ff8f8c;"
-            }
-            else {
-                button.style = "background: #ffc5c3;"
-            }
+            if (button.id == value) {button.style = "background: #ff8f8c;"}
+            else {button.style = "background: #ffc5c3;"}
         } else {
-            if (button.id == value){
-                button.style = "background: #cdffca;"
-            }
-            else {
-                button.style = "background: #edffec;"
-            }
+            if (button.id == value){ button.style = "background: #cdffca;"}
+            else {button.style = "background: #edffec;"}
         }
     });
     disable_next_button(false);
