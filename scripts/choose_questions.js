@@ -17,7 +17,7 @@ let verified_links = {
 
 Object.keys(links).forEach(
     function(link) {
-        let path = `scripts/questions/${links[link]}`
+        let path = `scripts/questions/${links[link]}&theme=${theme}`
         if (link in verified_links) {background_color = "#178b00"} else {background_color = "#8b0012"}
         document.getElementById("choose").innerHTML +=
         `<button class="button" onclick="location.href='quiz.html?path=${path}';" style="background: ${background_color};">

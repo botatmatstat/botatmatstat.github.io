@@ -13,7 +13,7 @@ function prev_question() {
     let options_field = document.getElementById("options");
     options_field.innerHTML = "";
     if (question_number > 0) {question_number--}
-    else {location.href='instructions.html'}
+    else {location.href=`instructions.html?theme=${theme}`}
     init_question();
 }
 // Перейти к следующему вопросу
@@ -91,6 +91,6 @@ function render_latex(){
 // Перейти к результатам
 function results() {
     let max_result = questions.length; 
-    results_link = `results.html?result=${result_array.reduce((a, b) => a + b, 0)}&max_result=${max_result}`;
+    results_link = `results.html?theme=${theme}&result=${result_array.reduce((a, b) => a + b, 0)}&max_result=${max_result}`;
     location.href = results_link; 
 }
