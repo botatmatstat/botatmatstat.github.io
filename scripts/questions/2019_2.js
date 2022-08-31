@@ -250,7 +250,16 @@ questions = [{
         "E": String.raw`\(\,2p\,\)`,
     },
     "true": "A",
-    "explanation": "",
+    "explanation": String.raw`
+            \(L = p^{X_1} \cdot (1- p)^{1-X_1} \) <br>
+            \(l = X_1 \ln p + (1 - X_1)\cdot \ln (1 - p)\)  <br>
+            \(\frac{\partial l}{\partial p} = \frac{X_1}{p} - \frac{1 - X_1}{1-p} \)  <br>
+            \(\frac{\partial l ^ 2}{\partial ^2 \theta}
+            = - \frac{X_1}{p} - \frac{1-X_1}{(1-p)^2} \)   <br>
+            \(I_1(p) = - \operatorname{E}(\frac{\partial l ^ 2}{\partial ^2 \theta}) = \)  <br>
+            \(=\frac{p}{p^2} + \frac{1-p}{(1-p)^2} = \frac{1}{p(1-p)}\)  <br>
+            \(I_n(p) = I_1(p) \cdot n \Rightarrow I_2(p) = \frac{2}{p(1-p)}\)  <br>
+        `,
 }, {
     "question": String.raw`Пусть \(\,X\sim\mathcal{N}(0,1)\,\)и \(\,Y\sim\chi^{2}(4)\,\)— независимые стандартная нормальная и хи-квадрат с четырьмя степенями свободы случайные величины соответственно.Вероятность \(\,\operatorname{P}(X^2>Y)\,\)равна`,
     "answers": {

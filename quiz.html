@@ -7,6 +7,7 @@
 <script src="scripts/questions_link.js"></script>
 </head>
 <body>
+
 <h1>Ботать матстат</h1><hr>
 <h2 id="question-number">Номер вопроса</h2>
 <div class="center" id="question-text">Если вопросы долго не загружаются, попробуйте зайти через другой браузер</div>
@@ -15,11 +16,10 @@
 <div id="options" class="container"></div>
 <hr>
 <div class="container">
-<button class="button" onclick="location.href='instructions.html';" style="margin-top: 3%;">Вернуться к выбору заданий</button>
+<button class="button absolute" onclick="prev_question();" style="margin-top: 3%;">Назад</button>
 </div>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script src="scripts/formulas.js"></script>
 <script src="scripts/quiz.js" type="application/javascript"></script>
 </body>
 </html>

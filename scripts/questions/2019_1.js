@@ -8,7 +8,7 @@ questions = [{
         "E": String.raw`\(\,e^{\bar{X}}\,\)`,
     },
     "true": "C",
-    "explanation": "",
+    "explanation": String.raw`\(\check{g}(\lambda) = g(\check{\lambda})\)`,
 }, {
     "question": String.raw`Имеется случайная выборка размера \(\,50\,\)из нормального распределения.При проверке гипотезы о равенстве дисперсии заданному значению при неизвестном математическом ожидании используется статистика,имеющая распределение`,
     "answers": {
@@ -30,14 +30,24 @@ questions = [{
         "E": String.raw`\(\,1/\ln X_1\,\)`,
     },
     "true": "C",
-    "explanation": "",
+    "explanation": String.raw`
+        \(L = \frac{1}{\theta ^ 2} \cdot X_1 \cdot e^{\frac{-X}{\theta}}\) <br>
+        \(l = \ln L = -2 \ln \theta + \ln X_1 - \frac{X}{\theta}  \) <br>
+        \(\frac{\partial l}{\partial \theta} = - \frac{2}{\theta} + \frac{X_1}{\theta^2} = 0 \Rightarrow\) <br>
+        \(\Rightarrow - 2 \theta + X_1 = 0 \Rightarrow \check{\theta_{ML}} = \frac{X_1}{2} \) <br>
+        Проверка условия второго порядка: <br> 
+        \(\frac{\partial l ^ 2}{\partial ^2 \theta} = \frac{2}{\theta^2} - 2 \frac{X_1}{\theta^3}\) <br>
+        Подставим предполагаемую \(\check{\theta} \): <br>
+        \(\frac{8}{X_1}^2 - \frac{16 X_1}{X_1^3} = \frac{-8}{X_1^2} < 0\)<br>
+    `,
 }, {
     "question": String.raw`Последовательность оценок \(\,\hat \theta_n\,\)называется состоятельной для параметра \(\,\theta\,\),если`,
     "answers": {
         "A": String.raw`\(\,\hat \theta_n \stackrel{P}{\to}\theta\,\operatorname{if}\,n\stackrel{}{\to}\infty\,\)`,
         "B": String.raw`\(\,\operatorname{D}(\hat \theta_n)=(\theta)^2/n\,\)`,
         "C": String.raw`\(\,\operatorname{E}(\hat \theta_n)=\theta\,\)`,
-        "D": String.raw`\(\,\operatorname{E}((\hat \theta_n-\theta)^2)\stackrel{}{\to}0\,\operatorname{if}\,n\stackrel{}{\to}\infty\,\)`,
+        "D": String.raw`\(\,\operatorname{E}((\hat \theta_n-\theta)^2)\stackrel{}{\to}0\,\)
+                        \(\operatorname{if}\,n\stackrel{}{\to}\infty\,\)`,
         "E": String.raw`\(\,\operatorname{E}((\hat \theta_n-\theta)^2)\leq \operatorname{E}((\tilde \theta-\theta)^2)\,\forall\,\tilde \theta \in K\,\)`,
     },
     "true": "A",
@@ -63,7 +73,16 @@ questions = [{
         "E": String.raw`\(\,2(1-p)\,\)`,
     },
     "true": "A",
-    "explanation": "",
+    "explanation": String.raw`
+        \(L = p^{X_1} \cdot (1- p)^{1-X_1} \) <br>
+        \(l = X_1 \ln p + (1 - X_1)\cdot \ln (1 - p)\)  <br>
+        \(\frac{\partial l}{\partial p} = \frac{X_1}{p} - \frac{1 - X_1}{1-p} \)  <br>
+        \(\frac{\partial l ^ 2}{\partial ^2 \theta}
+        = - \frac{X_1}{p} - \frac{1-X_1}{(1-p)^2} \)   <br>
+        \(I_1(p) = - \operatorname{E}(\frac{\partial l ^ 2}{\partial ^2 \theta}) = \)  <br>
+        \(=\frac{p}{p^2} + \frac{1-p}{(1-p)^2} = \frac{1}{p(1-p)}\)  <br>
+        \(I_n(p) = I_1(p) \cdot n \Rightarrow I_2(p) = \frac{2}{p(1-p)}\)  <br>
+    `,
 }, {
     "question": String.raw`Нормальные случайные величины \(\,X\sim N(2,5)\,\)и \(\,Y\sim N(5,2)\,\)имеют совместное нормальное распределение.Они независимы,если:`,
     "answers": {

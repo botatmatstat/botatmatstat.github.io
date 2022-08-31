@@ -21,6 +21,14 @@ function init_question() {
     render_answers();
 }
 
+// Перейти к предыдущему вопросу
+function prev_question() {
+    let options_field = document.getElementById("options");
+    options_field.innerHTML = "";
+    if (question_number > 0) {question_number--}
+    else {location.href='instructions.html'}
+    init_question();
+}
 // Перейти к следующему вопросу
 function next_question(effect) {
     let options_field = document.getElementById("options");
@@ -34,11 +42,11 @@ function next_question(effect) {
 // Вывести пояснение
 function render_explanation(effect, value, right_answer){  
     // Для быстрой проверочки  
-    // next_question(effect);
-    // return
     let question_field = document.getElementById("question-text");
-    // let explanation = questions[question_number].explanation; 
-    // question_field .innerHTML += `${explanation}`;
+    let explanation = questions[question_number].explanation; 
+    if (explanation != ""){
+        question_field .innerHTML += `<hr><p class="explanation">${explanation}</p>`;
+    }
     question_field .innerHTML += 
     `<hr>
     <button class="button" onclick="next_question(${effect});">
@@ -46,6 +54,7 @@ function render_explanation(effect, value, right_answer){
     </button> 
     <br>`;
     disable_buttons(value, right_answer);
+    render_latex();
 }
 
 // Отключить возможность нажимать кнопки
@@ -91,8 +100,6 @@ function render_answers(){
 
 // Отрендерить латех
 function render_latex(){
-    MathJax.typeset();
-    MathJax.startup.document.state(0);
     MathJax.typeset();
 }
 
