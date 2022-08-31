@@ -11,7 +11,8 @@
 <h1>Ботать матстат</h1> <hr>
 <h2>Опции:</h2>
 <div class="container">
-<button class="button" onclick="location.href='instructions.html';" style="padding: 5%;">Выбрать задания для ботания</button>
+<button class="button" onclick="location.href=`instructions.html?theme=${theme}`;" style="padding: 5%;">Выбрать задания</button><br>    
+<button class="button" onclick="switch_theme()" style="padding: 5%;">Сменить тему</button>
 </div> <hr>
 <h2>Описание:</h2>
 <div class="center">
@@ -47,5 +48,6 @@
 <li>Для каждой задачи возможно написание пояснения по ключу <code>explanation</code>. Но пока ни одно пояснение ни к одной задаче не написано</li>
 </ul>
 </div>
+<script src="scripts/themes.js"></script>
 </body>
 </html>

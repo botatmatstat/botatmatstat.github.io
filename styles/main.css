@@ -3,6 +3,9 @@ html {
     padding: 0px;
     scroll-behavior: smooth;
 }
+html.night {
+    background-color: #1E1E1E;
+}
 body {
     width: 80%;
     min-height: calc(100vh - 4em);
@@ -15,12 +18,22 @@ body {
     border-width: 20px;
     box-shadow: 0px 0px 10px rgba(0.5,0.5,0.5,0.5);
 }
+body.night{
+    background-color: #1E1E1E;
+    border-color: #1E1E1E;
+}
 p {
     color: #444444;
     font-family: 'Roboto', sans-serif;
     font-size: 18.5pt;
     line-height: 1.15;
     margin: 4pt;
+}
+body.night h1, body.night h2{
+    color: white;
+}
+body.night div.center h2 {
+    color: #35343a;
 }
 a {
     color: #35343a;
