@@ -3,7 +3,7 @@ try {
     questions;
 } catch (error) {
     setTimeout(() => {
-        document.location.reload();
+        window.location.reload(false) // document.location.reload();
     }, 1500);
 }
 // Переменные для результатов
