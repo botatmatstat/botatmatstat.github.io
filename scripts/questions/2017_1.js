@@ -329,3 +329,6 @@ questions = [{
     "true": "B",
     "explanation": "",
 }, ]
+
+init_question();   
+var result_array = new Array(questions.length);

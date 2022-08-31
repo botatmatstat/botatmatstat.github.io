@@ -1,18 +1,5 @@
-// Если вопросы не загрузились, то перезагрузить страницу
-try {
-    questions;
-} catch (error) {
-    setTimeout(() => {
-       document.location.reload();
-    }, 1500);
-}
-// Переменные для результатов
-var max_result = questions.length; 
-var result_array = new Array(questions.length);
-
 // Номер текущего вопроса 
 var question_number = 0;
-init_question();    
 
 // Инициализировать вопрос
 function init_question() {
@@ -112,6 +99,7 @@ function render_latex(){
 
 // Перейти к результатам
 function results() {
+    let max_result = questions.length; 
     results_link = `results.html?result=${result_array.reduce((a, b) => a + b, 0)}&max_result=${max_result}`;
     location.href = results_link; 
 }
