@@ -1,6 +1,13 @@
 // Номер текущего вопроса 
 var question_number = 0;
+test = getQueryVariable("test")
 
+let titles = {
+    "matstat": "Ботать матстат", 
+    "terver": "Ботать тервер", 
+    "metrix": "Ботать метрику", 
+}
+document.getElementById("title").innerHTML = titles[getQueryVariable("test")]
 // Инициализировать вопрос
 function init_question() {
     document.getElementById("question-text").innerHTML = questions[question_number].question;
@@ -13,7 +20,7 @@ function prev_question() {
     let options_field = document.getElementById("options");
     options_field.innerHTML = "";
     if (question_number > 0) {question_number--}
-    else {location.href=`instructions.html?theme=${theme}`}
+    else {location.href=`instructions.html?theme=${theme}&test=${test}` }
     init_question();
 }
 // Перейти к следующему вопросу

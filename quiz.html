@@ -6,14 +6,14 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
 </head>
 <body>
-<h1>Ботать матстат</h1><hr>
+<h1 id="title">Ботать матстат</h1><hr>
 <h2 id="question-number">Номер вопроса</h2>
 <div class="center" id="question-text">Если вопросы долго не загружаются, попробуйте зайти через другой браузер</div>
 <hr>
 <h2>Варианты ответа</h2>
 <div id="options" class="container"></div>
 <hr>
-<div class="container">
+<div class="container" style="display: block;">
 <button class="button" onclick="prev_question();" style="margin-top: 3%;">Назад</button>
 <button class="button" onclick="next_question();" style="margin-top: 3%; background-color: grey;cursor:not-allowed;" id="next-button" disabled>Дальше</button>
 </div>
