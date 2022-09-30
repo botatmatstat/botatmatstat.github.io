@@ -26,10 +26,16 @@ let links_metrix = {
     "КР-4 2018": "metrix_final_0.js",
 }
 
+let links_games = {
+    "Тигры-1": "games_0.js",
+    "Тигры-2": "games_1.js",
+    "Тигры-3": "games_2.js",
+}
 let quizes = {
     "matstat": links_matstat, 
     "terver": links_terver, 
     "metrix": links_metrix, 
+    "games": links_games,
 }
 
 let test = getQueryVariable("test")

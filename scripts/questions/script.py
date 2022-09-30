@@ -52,5 +52,5 @@ if __name__ == "__main__":
     minify_command = "css-html-js-minify {} --overwrite"
     beautify_command = "css-beautify {} --replace"
     find_program(minify_program, True)
-    find_program(beautify_program, True)
+   # find_program(beautify_program, True)
     main()

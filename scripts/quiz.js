@@ -6,6 +6,7 @@ let titles = {
     "matstat": "Ботать матстат", 
     "terver": "Ботать тервер", 
     "metrix": "Ботать метрику", 
+    "games": "Ботать тигры",
 }
 document.getElementById("title").innerHTML = titles[getQueryVariable("test")]
 // Инициализировать вопрос
