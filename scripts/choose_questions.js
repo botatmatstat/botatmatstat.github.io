@@ -21,7 +21,7 @@ let links_terver = {
 }
 let links_metrix = {
     "КР-1 2018": "metrix_kr1.js",
-    "КР-2": "metrix_midterm.js",
+    "КР-2 2018": "metrix_midterm.js",
     "КР-3 2018": "metrix_kr3.js",
     "КР-4 2018": "metrix_final_0.js",
 }
