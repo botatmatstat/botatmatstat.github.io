@@ -24,7 +24,6 @@ let links_metrix = {
     "2016 КР-1": "metrix_kr1_2016.js", 
     "2017 КР-1": "metrix_kr1_2017.js", 
     "2018 КР-1 (1)": "metrix_kr1_2018.js", 
-    "2018 КР-1 (2)": "metrix_kr1.js",
     "КР-2 2018": "metrix_midterm.js",
     "КР-3 2018": "metrix_kr3.js",
     "КР-4 2018": "metrix_final_0.js",
