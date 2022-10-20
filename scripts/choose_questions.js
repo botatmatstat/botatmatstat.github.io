@@ -13,7 +13,8 @@ let verified_links = {
     "Файнал 2018-5": "2018_retake.js",
     "Файнал 2019-1": "2019_1.js",
     "Файнал 2019-2": "2019_2.js",
-    "2018 КР-1 (1)": "metrix_kr1_2018.js", 
+    "2018 КР-1": "metrix_kr1_2018.js", 
+    "2019 КР-1": "metrix_kr1_2019.js", 
 }
 
 let links_terver = {
@@ -23,7 +24,8 @@ let links_terver = {
 let links_metrix = {
     "2016 КР-1": "metrix_kr1_2016.js", 
     "2017 КР-1": "metrix_kr1_2017.js", 
-    "2018 КР-1 (1)": "metrix_kr1_2018.js", 
+    "2018 КР-1": "metrix_kr1_2018.js", 
+    "2019 КР-1": "metrix_kr1_2019.js", 
     "КР-2 2018": "metrix_midterm.js",
     "КР-3 2018": "metrix_kr3.js",
     "КР-4 2018": "metrix_final_0.js",
