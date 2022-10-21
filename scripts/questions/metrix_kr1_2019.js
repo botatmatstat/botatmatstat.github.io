@@ -22,7 +22,8 @@ questions = [{
         "true": "B",
         "explanation": String.raw`
             $$ \mathbb{E}(2  X + Y) = \mathbb{E}(2 X) + \mathbb{E}(Y) = 5 $$
-            $$ \text{Var} (2X + Y) = 4 \cdot \text{Var}(X) + 2 \cdot \text{cov} (2 X, Y) + \text{Var} (Y) = 8 $$
+            $$ \mathbb{D} (2X + Y) = $$
+            $$ = 4  \mathbb{D}(X) + 2 \operatorname{cov} (2 X, Y) + \mathbb{D} (Y) = 8 $$
         `,
     
     }
@@ -38,7 +39,8 @@ questions = [{
                 $$T_n = 0$$
             `,
             "C": String.raw`
-                $$\lim_{n\ \rightarrow \infty} \operatorname{P}(|T_n - \theta|> \varepsilon) = 0  \forall \varepsilon>0$$
+                $$\lim_{n\ \rightarrow \infty} \operatorname{P}(|T_n - \theta|> \varepsilon) = 0$$
+                $$ \forall \varepsilon>0$$
             `,
             "D": String.raw`
                 $$\operatorname{E}(T_n) = 0$$
@@ -219,19 +221,19 @@ questions = [{
     "answers": {
     
             "A": String.raw`
-                оценка коэффициента \(\,\,\beta_0\,\,\) уменьшится, а \(\,\,\,\beta_1\,\,\) — увеличится
+                $$ \hat \beta_0 \downarrow, \,\,\, \hat \beta_1 \uparrow $$
             `,
             "B": String.raw`
-                оценка коэффициента \(\,\,\beta_0\,\,\) увеличится, а \(\,\,\,\beta_1\,\,\) — уменьшится
+                 $$ \hat \beta_0 \uparrow, \,\,\, \hat \beta_1 \downarrow $$
             `,
             "C": String.raw`
-                оценки коэффициентов \(\,\,\beta_0\,\,\), \(\,\,\,\beta_1\,\,\) не изменятся
+                оценки коэффициентов не изменятся
             `,
             "D": String.raw`
-                оценки коэффициентов \(\,\,\beta_0\,\,\), \(\,\,\,\beta_1\,\,\)уменьшатся
+            $$ \hat \beta_0 \downarrow, \,\,\, \hat \beta_1\downarrow $$
             `,
             "E": String.raw`
-                оценки коэффициентов \(\,\,\beta_0\,\,\),\(\,\,\,\beta_1\,\,\) увеличатся
+            $$ \hat \beta_0 \uparrow , \,\,\, \hat \beta_1 \uparrow $$
             `,},
         "true": "B",
         "explanation": String.raw`

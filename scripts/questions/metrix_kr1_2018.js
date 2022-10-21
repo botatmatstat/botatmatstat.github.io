@@ -27,20 +27,20 @@ questions = [{
     "answers": {
     
             "A": String.raw`
-                оценки \(\,\hat\beta_0\,\) и \(\,\hat\beta_1\,\) не изменились
+                оценки не изменились
             `,
             "B": String.raw`
-                оценка \(\,\hat\beta_0\,\) уменьшилась, а оценка \(\,\hat\beta_1\,\) не
+                \(\,\hat\beta_0 \downarrow \,\), а \(\,\hat\beta_1\,\) не
 изменилась
             `,
             "C": String.raw`
-                оценки \(\,\hat\beta_0\,\) и \(\,\hat\beta_1\,\) увеличились
+                \(\,\hat\beta_0 \uparrow \,\,\hat\beta_1 \uparrow \,\) 
             `,
             "D": String.raw`
-                оценки \(\,\hat\beta_0\,\) и \(\,\hat\beta_1\,\) уменьшились
+               \(\,\hat\beta_0 \downarrow \,\) и \(\,\hat\beta_1 \downarrow \,\)
             `,
             "E": String.raw`
-                оценка \(\,\hat\beta_0\,\) увеличилась, а оценка \(\,\hat\beta_1\,\) не
+                 \(\,\hat\beta_0 \uparrow\,\), а \(\,\hat\beta_1\,\) не
 изменилась
             `,},
         "true": "E",
