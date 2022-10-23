@@ -4,7 +4,7 @@ questions = [{
         "A": String.raw`\(\,0.5\,\)`,
         "B": String.raw`\(\,0.2\,\)`,
         "C": String.raw`\(\,5/7\,\)`,
-        "D": String.raw`\(\,\operatorname{P}hi(0.7)-\operatorname{P}hi(0.2)\,\)`,
+        "D": String.raw`\(\,\operatorname{P}\xi(0.7)-\operatorname{P}\xi(0.2)\,\)`,
         "E": String.raw`\(\,\int_{0}^{1}\frac{1}{\sqrt{2\pi}}\,e^{-t^2/2}\,dt\,\)`,
     },
     "true": "B",
@@ -221,10 +221,10 @@ questions = [{
 }, {
     "question": String.raw`Вася играет в компьютерную игру.Число выстрелов,необходимых,чтобы убить зомби,является случайной величиной с математическим ожиданием 2 и дисперсией 2.На уровне осталось 200 зомби,а у Васи — 420 патронов.Вероятность того,что Васе хватит патронов на весь уровень,примерно равна`,
     "answers": {
-        "A": String.raw`\(\,1-\operatorname{P}hi(2)\,\)`,
-        "B": String.raw`\(\,1-\operatorname{P}hi(1)\,\)`,
-        "C": String.raw`\(\,\operatorname{P}hi(1)\,\)`,
-        "D": String.raw`\(\,\operatorname{P}hi(2)\,\)`,
+        "A": String.raw`\(\,1-\operatorname{P}\xi(2)\,\)`,
+        "B": String.raw`\(\,1-\operatorname{P}\xi(1)\,\)`,
+        "C": String.raw`\(\,\operatorname{P}\xi(1)\,\)`,
+        "D": String.raw`\(\,\operatorname{P}\xi(2)\,\)`,
         "E": String.raw`\(\,0.5\,\)`,
     },
     "true": "C",
