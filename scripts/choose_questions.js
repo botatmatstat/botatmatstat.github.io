@@ -15,6 +15,7 @@ let verified_links = {
     "Файнал 2019-2": "2019_2.js",
     "2018 КР-1": "metrix_kr1_2018.js", 
     "2019 КР-1": "metrix_kr1_2019.js", 
+    "КР-2 2018": "metrix_midterm.js",
 }
 
 let links_terver = {
