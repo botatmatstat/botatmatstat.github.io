@@ -62,7 +62,7 @@ questions = [{
         \end{pmatrix}$$
        $$ \text{RSS} = (Y - X \hat \beta)^T \cdot (Y - X \hat \beta) = $$
         $$ = Y^T Y - Y^T X (X^T X)^{-1} X^T y = 24 $$ 
-        $$ \text{TSS} = y^T y - n \cdot \bar{y}^2 = y^T y - n \cdot \dfrac{\sum y_i^2}{n^2} = 60$$
+        $$ \text{TSS} = y^T y - n \cdot \bar{y}^2 = y^T y - n \cdot \dfrac{(\sum y_i)^2}{n^2} = 60$$
         $$ R^2 = 1 - \dfrac{RSS}{TSS} = 0.6 $$
         `,
     
